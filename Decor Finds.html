@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decor Finds</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+img {
+  border-radius: 7px;
+    }
+    .container {
+  position: relative;
+  text-align: center;
+}
+
+$brand-primary: #92B8C3;
+$brand-secondary: #FF30AA;
+$brand-dark: #fff;
+$brand-light: #fff;
+$brand-grey: #344;
+* {
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+}
+footer {
+  height: 300px;
+  background-color: $brand-primary;
+  position: relative;
+  .footer__inner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 40px 60px;
+    width: 100%;
+    * {
+      color: $brand-light;
+    }
+  }
+  .logo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 80px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform, opacity;
+    transition-duration: .8s;
+    transition-timing-function: ease;  
+    
+    &.show{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+<!-- Scroll Reveal -->
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: #fff;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-title{
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+
+.content{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .image{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content .image img{
+  z-index: 111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text-box2{
+  z-index: 222;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  width: 150px;
+  height: 75px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transform: translate(165px, -130px);
+}
+
+.content .text-box h3{
+  font-size: 2em;
+  
+}
+
+.media-icons{
+  margin-top: 100px;
+}
+
+.media-icons a{
+  color: #fff;
+  font-size: 2em;
+  margin: 60px;
+}
+
+.section-title{
+  font-size: 3em;
+  margin-bottom: 80px;
+}
+
+.info-title{
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.info{
+  width: 100%;
+  margin-left: 0px;
+}
+
+.media-info{
+  width: 400px;
+  margin-left: 50px;
+}
+
+.media-info li{
+  list-style: none;
+  font-size: 1.4em;
+}
+
+.media-info li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.media-info li:not(:last-child){
+  margin-bottom: 50px;
+}
+
+.media-info li:nth-child(1), .media-info li:nth-child(5){
+  padding-left: 100px;
+}
+
+.media-info li:nth-child(2), .media-info li:nth-child(4){
+  padding-left: 50px;
+}
+
+.sec-03{
+  margin-bottom: 100px;
+}
+
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Decor Finds</b></h3>
+  </div>
+    <!-- sidebar -->
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">Shop<i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button">Art and accessories</a>
+      
+ <!-- Test Start-->
+      <a href="#Furniture" onclick="myAccFunc2()" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right" id="myBtn2"></i>Furniture</a>
+      <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#Vase" class="w3-bar-item w3-button">Vase</a>
+      </div>
+ <!-- Test End -->
+      
+      
+      <a href="#Lighting" class="w3-bar-item w3-button">Lighting</a>
+      <a href="#Rugs and carpets" class="w3-bar-item w3-button">Rugs and carpets</a>
+      <a href="#Window treatments" class="w3-bar-item w3-button">Window treatments</a>
+      <a href="#Storage and organization" class="w3-bar-item w3-button">Storage and organization</a>
+      <a href="#Pillows and cushions" class="w3-bar-item w3-button">Pillows and cushions</a>
+      <a href="#Plants and flowers" class="w3-bar-item w3-button">Plants and flowers</a>
+      <a href="#Home fragrance" class="w3-bar-item w3-button">Home fragrance</a>
+      </div>
+    <a href="#footer" class="w3-bar-item w3-button">About</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Decor Finds</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left" id="home">Home</>      
+    <p class="w3-right"><i class="fa fa-search"></i>
+    </p>
+  </header>
+  <!-- Welcome -->
+<section class="sec-01">
+    <div class="w3-display-container w3-container">
+        <div class="image">
+            <img src="/images/welcome.jpg" alt="welcome" style="width:100%">
+        </div>
+        <div class="text-box2 w3-display"></div>
+        <div class="w3-display-topright w3-text-white" style="padding:24px 48px">
+            <h1 class="main-title" style="font-family:Baskerville;font-size:20px"><i>Welcome to<br>Decor Finds</i></h1>
+        </div>
+    </div>
+</section> 
+  <!-- Test -->
+  
+  
+  <!-- Image header
+  <div class="w3-container w3-text-grey">
+    <p>8 items</p>
+  </div> -->
+
+  <!-- Product grid -->
+  <header class="w3-container w3-xlarge">
+  <p class="w3-left" id="Furniture">Furniture</>
+  </header>
+  <div class="w3-container w3-text-grey">
+    <p id="Vase">Vase - 2 Items</p>
+  </div>
+  <!-- 1 Row 2 Items -->
+<div class="w3-row">
+    
+    <div class="w3-col l3 s6">
+     <div class="w3-container">
+        <a href="https://amzn.to/44iHzvr"></a><img src="/images/vase_black.jpg" style="width:100%">
+      </div><br>
+      
+      
+      <div class="w3-container">
+        <img src="https://i.pinimg.com/736x/27/41/08/274108a5f7134d48d8829c98255f0b76.jpg" style="width:100%">
+        </div><br>
+    </div>
+ <!-- 2 Row 2 Items -->   
+<div class="w3-col l3 s6">
+           
+      <div class="w3-container">
+        <div class="w3-display-container">  
+          <a href="https://amzn.to/3JYNqht"></a><img src="/images/vase_white.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+        </div>
+      </div><br>
+     
+     <div class="w3-container">
+        <img src="https://i.pinimg.com/564x/3e/54/2d/3e542d8f4b6d42dc3292b3cf270adac6.jpg" style="width:100%">
+      </div><br>
+    </div>
+    
+</div>
+    <!-- About -->
+    <div class="w3-display-container w3-container">
+        <div class="about-image-left"><img src="/images/about.jpg" alt="about" style="width:100%">
+            </div>
+                
+                    
+                    <div class="about-text w3-display-topleft w3-text-white" style="padding:24px 48px"><h1 style="font-family: Baskerville;font-size:30px"><i>All About Decor Finds<br></i></h1><p style="font-size:15px">Industry Leading Home Decorator<br><br>We help you improve your home's look and feel with a variety of products and services. From furniture to flooring, we have what you need to create a space that reflects your style. We also offer tips and inspiration to help you get started.</p>
+                </div>
+            </div>
+        </div>
+    </div><br>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center " id="footer">
+      
+      
+      <div class="logo"><i>Decor Finds</i></div>
+         <a href="https://instagram.com/decrfinds?igshid=ZDc4ODBmNjlmNQ=="><i class="fa fa-instagram w3-hover-opacity w3-large"></i></a><br>
+         <nav><p>©2023 by Decor Finds</p></nav>
+         
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+         
+                  
+
+            
+    
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i> -->
+  
+  <!-- End page content -->
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click "Shop" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Accordion 2
+function myAccFunc2() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", ""        );
+  }
+}
+
+<!-- Footer -->
+var logoElement = $('footer .logo');
+
+$(window).scroll(function() {
+  
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+     
+       $(logoElement).addClass('show');
+     
+   } else if($(logoElement).hasClass('show') && $(window).scrollTop() + $(window).height() > $(document).height() - 150) {
+     
+      $(logoElement).removeClass('show');
+     
+   }
+});
+
+<!-- Scroll Reveal -->
+      //common reveal options to create reveal animations
+      ScrollReveal({
+        //reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+      });
+
+      //target elements, and specify options to create reveal animations
+      ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+      ScrollReveal().reveal('.text-box2', { delay: 500, origin: 'top' });
+      ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+      ScrollReveal().reveal('.text-box, ', { delay: 600, origin: 'right' });
+      ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+      ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+      
+      ScrollReveal().reveal('.about-image-left', { delay: 500, origin: 'left' });
+      ScrollReveal().reveal('.about-text', { delay: 600, origin: 'top' });
+      
+      ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+</script>
+
+</body>
+</html>
