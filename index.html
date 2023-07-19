@@ -151,13 +151,12 @@ section{
 }
 
 .media-icons{
-  margin-top: 100px;
 }
 
 .media-icons a{
-  color: #fff;
-  font-size: 2em;
-  margin: 60px;
+  color: black;
+  font-size: 1em;
+  margin: 10px;
 }
 
 .section-title{
@@ -176,8 +175,7 @@ section{
 }
 
 .media-info{
-  width: 400px;
-  margin-left: 50px;
+  
 }
 
 .media-info li{
@@ -269,9 +267,9 @@ section{
 <section class="sec-01">
     <div class="w3-display-container w3-container">
         <div class="image">
-            <img src="images/welcome.jpg" alt="welcome" style="width:100%">
+            <img src="/images/welcome.jpg" alt="welcome" style="width:100%">
         </div>
-        <div class="text-box2 w3-display"></div>
+        <div class="text-box2"></div>
         <div class="w3-display-topright w3-text-white" style="padding:24px 48px">
             <h1 class="main-title" style="font-family:Baskerville;font-size:20px"><i>Welcome to<br>Decor Finds</i></h1>
         </div>
@@ -297,7 +295,7 @@ section{
     
     <div class="w3-col l3 s6">
      <div class="w3-container">
-        <a href="https://amzn.to/44iHzvr"></a><img src="images/vase_black.jpg" alt="vase black" style="width:100%">
+        <a href="https://amzn.to/44iHzvr"></a><img src="/images/vase_black.jpg" style="width:100%">
       </div><br>
       
       
@@ -310,7 +308,7 @@ section{
            
       <div class="w3-container">
         <div class="w3-display-container">  
-          <a href="https://amzn.to/3JYNqht"></a><img src="images/vase_white.jpg" alt="vase white" style="width:100%">
+          <a href="https://amzn.to/3JYNqht"></a><img src="/images/vase_white.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
         </div>
       </div><br>
@@ -323,7 +321,7 @@ section{
 </div>
     <!-- About -->
     <div class="w3-display-container w3-container">
-        <div class="about-image-left"><img src="images/about.jpg" alt="about" style="width:100%">
+        <div class="about-image-left"><img src="/images/about.jpg" alt="about" style="width:100%">
             </div>
                 
                     
@@ -336,15 +334,34 @@ section{
   <!-- Footer -->
   <footer class=" w3-padding-64 w3-light-grey w3-small w3-center " id="footer">
       
-     <div class="media"><i>Decor Finds</i></div>
+      
+      <div class="media"><i>Decor Finds</i></div>
          <div class="media-icons"><a href="https://instagram.com/decrfinds?igshid=ZDc4ODBmNjlmNQ=="><p class="fab fa-instagram"></p></a>
          <a href="#"><p class="fab fa-facebook"></p></a>
             <a href="#"><p class="fab fa-twitter"></p></a>
             <a href="#"><p class="fab fa-youtube"></p></a>
             <a href="#"><p class="fab fa-linkedin"></p></a>
-         </div>
-      <nav><font>©2023 by Decor Finds</font></nav>
-    </footer>
+            <div>
+                
+         <nav><font>©2023 by Decor Finds</font></nav>
+         </footer>
+         
+         
+         
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+         
+                  
+
+            
+    
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i> -->
+  
   <!-- End page content -->
 </div>
 
@@ -383,21 +400,6 @@ function myAccFunc2() {
   }
 }
 
-<!-- Footer -->
-var logoElement = $('footer .logo');
-
-$(window).scroll(function() {
-  
-   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-     
-       $(logoElement).addClass('show');
-     
-   } else if($(logoElement).hasClass('show') && $(window).scrollTop() + $(window).height() > $(document).height() - 150) {
-     
-      $(logoElement).removeClass('show');
-     
-   }
-});
 
 <!-- Scroll Reveal -->
       //common reveal options to create reveal animations
@@ -413,14 +415,15 @@ $(window).scroll(function() {
       ScrollReveal().reveal('.text-box2', { delay: 500, origin: 'top' });
       ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
       ScrollReveal().reveal('.text-box, ', { delay: 600, origin: 'right' });
-      ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+      ScrollReveal().reveal('.media-icons p', { delay: 500, origin: 'bottom',  });
       ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
       
       ScrollReveal().reveal('.about-image-left', { delay: 500, origin: 'left' });
       ScrollReveal().reveal('.about-text', { delay: 600, origin: 'top' });
       
-      ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+      ScrollReveal().reveal('.media-info li',{ delay: 700, origin: 'bottom', interval: 200 });
 </script>
 
 </body>
-</html>
+         </html>
+             
