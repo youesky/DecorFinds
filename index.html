@@ -145,6 +145,14 @@ section{
   border-radius: 10px;
   transform: translate(165px, -130px);
 }
+    .sidebar{
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: px;
+  width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
 .content .text-box h3{
   font-size: 2em;
@@ -210,13 +218,13 @@ section{
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block sidebar w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>Decor Finds</b></h3>
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright w3-text-white"></i>
+    <h3 class="w3-wide w3-text-white">Decor Finds</h3>
   </div>
     <!-- sidebar -->
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  <div class="w3-padding-64 w3-large w3-text-black" style="font-weight:bold">
     <a href="#" class="w3-bar-item w3-button">Home</a>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">Shop<i class="fa fa-caret-down"></i>
     </a>
