@@ -213,7 +213,34 @@ section{
 .sec-03{
   margin-bottom: 100px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
 
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  box-shadow: 3px 3px 8px #c7c7c7, -3px -3px 8px #ffffff;
+  color: #333;
+}
+
+.pagination button.active {
+  background-color: #F3ECDA;
+  color: #525252;
+  box-shadow: 3px 3px 8px #9c9c9c, -3px -3px 8px #ffffff;
+}
+
+.pagination button:hover {
+  background-color: #e3e3e3;
+  box-shadow: 2px 2px 6px #c7c7c7, -2px -2px 6px #ffffff;
+        }
 </style>
 </head>
 <body class="w3-content" style="max-width:1200px">
