@@ -2,39 +2,39 @@
 
 [
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "new 1",
-		"tag":"new"
+		"image": "products/images/vase_black.jpg",
+		"link": "https://amzn.to/44iHzvr",
+		"alt": "black vase",
+		"tag":""
 	},
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "new 1",
-		"tag":"new"
+		"image": "products/images/vase_white.jpg",
+		"link": "https://amzn.to/3JYNqht",
+		"alt": "white vase",
+		"tag":"Trending"
 	},
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "new 1",
-		"tag":"new"
+		"image": "products/images/spring_magic.jpg",
+		"link": "https://amzn.to/3Ol76P0",
+		"alt": "home fragrance",
+		"tag":""
 	},
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "new 1",
-		"tag":"new"
+		"image": "product/images/butterfly.jpg",
+		"link": "https://amzn.to/3Q5aXBe",
+		"alt": "butterfly",
+		"tag":""
 	},
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "new 1",
-		"tag":"new"
+		"image": "products/images/leaf.webp",
+		"link": "https://amzn.to/44H6TLT",
+		"alt": "frame 1",
+		"tag":"New"
 	},
 	{
-		"image": "images/butterfly.jpg",
-		"link": "#home",
-		"title": "butterfly",
+		"image": "products/images/frame1.webp",
+		"link": "https://amzn.to/3KimdGv",
+		"alt": "frame 2",
 		"tag":"new"
 	}
 ]
