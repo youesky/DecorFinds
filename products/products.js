@@ -35,7 +35,7 @@ http.onload = function(){
            
       <div class="w3-container">
         <div class="w3-display-container">  
-          <a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.title}" style="width:100%;"></a>
+          <a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.alt}" style="width:100%;"></a>
           <span class="w3-tag w3-display-topleft">${item.tag}</span><br>
          </div>
        </div><br>
