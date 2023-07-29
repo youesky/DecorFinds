@@ -2,19 +2,19 @@
 
 [
 	{
-		"image": "products/images/vase_black.jpg",
+		"image": "products/images/vase black.jpg",
 		"link": "https://amzn.to/44iHzvr",
 		"alt": "black vase",
 		"tag":""
 	},
 	{
-		"image": "products/images/vase_white.jpg",
+		"image": "products/images/vase white.jpg",
 		"link": "https://amzn.to/3JYNqht",
 		"alt": "white vase",
 		"tag":"Trending"
 	},
 	{
-		"image": "products/images/spring_magic.jpg",
+		"image": "products/images/spring magic.jpg",
 		"link": "https://amzn.to/3Ol76P0",
 		"alt": "home fragrance",
 		"tag":""
