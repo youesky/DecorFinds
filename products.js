@@ -25,17 +25,15 @@
       const currentProducts = productsData.slice(startIndex, endIndex);
     
       const output = currentProducts.map(item => `
-        <div class="item"> 
-          <div class="img"> 
-            <img src="${item.image}" alt="${item.description}"> 
-          </div> 
-          <div class="content"> 
-            <div class="title">${item.title}</div> 
-            <div class="des">${item.description}</div> 
-            <div class="price">${item.price}</div> 
-            <button class="add">Add to cart</button> 
-          </div> 
-        </div>
+        <div class="w3-col l3 s6">
+           
+      <div class="w3-container">
+        <div class="w3-display-container">  
+          <a href="${item.link}" target="_blank"><img src="${item.image}" alt="${item.alt}" style="width:100%;"></a>
+          <span class="w3-tag w3-display-topleft">${item.tag}</span><br>
+         </div>
+       </div><br>
+    </div>
       `).join('');
       productsContainer.innerHTML = output;
     };
