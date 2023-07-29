@@ -1,37 +1,31 @@
-/*
-	We start our code with an ajax request to fetch the data
-	from the json file.
-*/
-// First i create a new xmlhttp-request object.
-let http = new XMLHttpRequest();
-// the variable http holds now all methods and properties of the objct.
+// script.js
 
-//  next i prepare the request with the open() method.
-http.open('get', 'products.json', true);
-// the first argument sets the http method.
-// in the second argument we pass the file where our data lives.
-// and last the keyword true, sets the request to be async.
+const itemsPerPage = 4; // Number of products to display per page
+let currentPage = 1; // Current page number
+let productsData = []; // Variable to store the product data
 
-// next i will send the request.
-http.send();
+const fetchProducts = async () => {
+  try {
+    const response = await fetch('products.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const products = await response.json();
+    return products;
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    return [];
+  }
+};
 
-// Now i have to catch the response.
-// i will check the onload eventlistener.
-http.onload = function(){
-	// Inside the function i need to check the readystate and status properties.
-	if(this.readyState == 4 && this.status == 200){
-		// if we have a successful response, i have to parse the json data
-		// and convert them to a javascript array.
-		let products = JSON.parse(this.responseText);
+const renderProducts = () => {
+  const productsContainer = document.querySelector(".products");
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProducts = productsData.slice(startIndex, endIndex);
 
-		// next i need an empty variable to add the incoming data.
-		let output = "";
-
-		// now i have to loop trough the products, and in every iteration
-		// i add an html template to the output variable.
-		for(let item of products){
-			output += `
-				 <div class="w3-col l3 s6">
+  const output = currentProducts.map(item => `
+    <div class="w3-col l3 s6">
            
       <div class="w3-container">
         <div class="w3-display-container">  
@@ -40,10 +34,36 @@ http.onload = function(){
          </div>
        </div><br>
     </div>
-			`;
-		}
-		/* and last i target the products container and add the data that the
-		output variable holds. */
-		document.querySelector(".products").innerHTML = output;
-	}
-} 
+  `).join('');
+  productsContainer.innerHTML = output;
+};
+
+const renderPagination = () => {
+  const totalPages = Math.ceil(productsData.length / itemsPerPage);
+
+  const paginationContainer = document.querySelector(".pagination");
+  paginationContainer.innerHTML = '';
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.addEventListener('click', () => {
+      currentPage = i;
+      renderProducts();
+      renderPagination();
+    });
+
+    // Add "active" class to the current page button
+    if (i === currentPage) {
+      button.classList.add('active');
+    }
+
+    paginationContainer.appendChild(button);
+  }
+};
+
+(async () => {
+  productsData = await fetchProducts();
+  renderProducts();
+  renderPagination();
+})();
