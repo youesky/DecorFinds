@@ -2,25 +2,25 @@
 
 [
 	{
-		"image": "images/vase black.jpg",
+		"image": "images/vase black.webp",
 		"link": "https://amzn.to/44iHzvr",
 		"alt": "black vase",
 		"tag":""
 	},
 	{
-		"image": "images/vase white.jpg",
+		"image": "images/vase white.webp",
 		"link": "https://amzn.to/3JYNqht",
 		"alt": "white vase",
 		"tag":"Trending"
 	},
 	{
-		"image": "images/spring magic.jpg",
+		"image": "images/spring magic.webp",
 		"link": "https://amzn.to/3Ol76P0",
 		"alt": "home fragrance",
 		"tag":""
 	},
 	{
-		"image": "images/butterfly.jpg",
+		"image": "images/butterfly.webp",
 		"link": "https://amzn.to/3Q5aXBe",
 		"alt": "butterfly",
 		"tag":""
