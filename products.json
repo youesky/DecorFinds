@@ -29,12 +29,18 @@
 		"image": "images/leaf.webp",
 		"link": "https://amzn.to/44H6TLT",
 		"alt": "frame 1",
-		"tag":"New"
+		"tag":""
 	},
 	{
 		"image": "images/frame1.webp",
 		"link": "https://amzn.to/3KimdGv",
 		"alt": "frame 2",
+		"tag":"new"
+	},
+	{
+		"image": "images/cycle vase.webp",
+		"link": "https://amzn.to/3OcgzXz",
+		"alt": "cycle vase",
 		"tag":"new"
 	}
 ]
